@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using SQLiteTheManager.Properties;
 
 namespace SQLiteTheManager
 {
@@ -100,7 +101,7 @@ namespace SQLiteTheManager
         {
             if (e.Node.Name.Equals("table"))
             {
-                sqlTextBox.Text = "SELECT * FROM " + e.Node.Text;
+                sqlTextBox.Text = Resources.SELECTFROM + e.Node.Text;
                 executeQuery();
             }
             e.Node.ExpandAll();
